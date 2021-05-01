@@ -27,6 +27,10 @@ def get_version():
   version = data2["version"]
   return version
 
+@client.event 
+async def on_ready():
+  print ('Bot is ready')
+
 @client.command(name="prov")
 async def _prov(ctx):
     await ctx.send(f"""Enter your Province
@@ -72,10 +76,23 @@ Total Recovered: {totalrecovered}
     else :
       await ctx.send("Not Valid Input enter .prov again")
 
-@client.event 
-async def on_ready():
-  print ('Bot is ready')
+
+
+
+
+@client.command()
+async def info(ctx):
+  await ctx.send ("""COVID-19 BOT
+
+Purpose of this bot is to inform users about daily COVID-19 cases in their province
+
+Last Updated: May 1, 2021""")
+
+@client.command()
+async def commands(ctx):
+  await ctx.send("""".prov" - choose a province
+"ON" - the abbreviation of the province (Ex. "ON" for Ontario)""")
+
 
 load_dotenv ()
-print (os.getenv('TOKEN'))
 client.run(os.getenv('TOKEN'))
