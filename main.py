@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 import discord 
 import requests
 from discord.ext import commands
@@ -74,5 +76,6 @@ Total Recovered: {totalrecovered}
 async def on_ready():
   print ('Bot is ready')
 
-
-client.run('ODI5NTc3NTMzMTI0NzcxODQx.YG6KSA.Yeozp0M1mkUIhzVlVBnO0OHAH7U')
+load_dotenv ()
+print (os.getenv('TOKEN'))
+client.run(os.getenv('TOKEN'))
