@@ -146,6 +146,5 @@ async def commands(ctx):
 async def contact(ctx):
   await ctx.send ("If there is any feedback or errors please email yugipoke27@gmail.com ")
 
-
 load_dotenv ()
 client.run(os.getenv('TOKEN'))
