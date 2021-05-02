@@ -2,64 +2,59 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 <style>
-
-    .image1{
-        width: 40%;
-        height: 40%;
-        top: 40%;
-        left: 80%;
-        opacity: 0.44;
-    }    
-
-
-    .image3{
-        right: 10%;
-        width: 30%;
-        height: 30%;
-        opacity: 0.44;
-    }    
-
-    .title{
-        color: white; 
-        font-family: "Roboto";
-        font-weight: 570;
-        position: absolute;
-        top: 20%;
-        left: 26%;
-        font-size: 120px;
-    }   
+  
+    .main-position{
+        display: flex;  
+        width: 100vw;
+        height: 100vh;
+        align-items:center;
+        justify-content: center;
+        background-image: url("viruses-solid.svg");
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-color:rgb(44, 47, 51);
+        background-blend-mode:soft-light;
+        
+    }
    
-   .info1 {
+    .line1-text {
+        color: white;
+        font-family: "Roboto";
+        font-weight: 570;
+        text-align: center;  
+    }
+
+    .line2-text{
         color: white; 
         font-family: "Roboto";
         font-weight: 570;
-        position: absolute;
-        top: 44%;
-        left: 26.5%;
-        font-size: 25px;
+        /* position: absolute;
+        top: 80%;
+        left: 6% */
+        
 
     }
 
-    .info2 {
-        color: white; 
+    .sub-text{
+        color: rgb(173, 172, 172);
         font-family: "Roboto";
-        font-weight: 570;
-        position: absolute;
-        top: 47%;
-        left: 26.5%;
-        font-size: 20px;
-    }
+        font-weight: 400;
+        text-align: center;
 
-    .cvid-img {
-        width : 100px;
+
+        
+
+
     }
 
     body {
-        background-color: rgb(44, 47, 51);
+        background-color:rgb(44, 47, 51);
     }
 
     .button {
-        font-family: 'Roboto',Arial,sans-serif;; 
+        margin:auto;
+        font-family: 'Roboto'; 
         font-weight: 570;
         background-color: rgb(114, 137, 218);
         border: none;
@@ -67,7 +62,8 @@
         padding: 12px 20px;
         text-align: center;
         text-decoration: none;
-        display: inline-block;
+        display:block;
+        width:fit-content;
         font-size: 16px;
         border-radius: 7px;
         opacity: 1;
@@ -80,63 +76,46 @@
         background-color: rgb(76, 107, 219)
     }
 
-    .button-position{
-        margin: 0;
-        position: absolute;
-        top: 55%;
-        left: 30%;
-        -ms-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%);
+    .image1{
+        position:center;
+        opacity: 1;
+        height: 100px;
+        width: 100px;
+        z-index: 1;
+        
+        
     }
-
+  
 </style>
 
 <html>
-<head> 
-    <img src="virus-solid.svg" class =image1>
-    <img src="viruses-solid.svg" class =image3>
-
-
+<head>
     <title> Covid Bot Discord</title>
 </head>
 <body>
- 
-    <div>
 
-        <h1 class = "info1"> Covid-19 Case Tracker Discord Bot</h1>
-    </div>
-    <div>
 
-        <h2 class = "info2"> The most convenient wat to keep tabs on covid cases in Canada</h2>
 
-    </div>
-    <div>
+    <div class = "main-position">
 
-        <h3 class = "title"> Suri</h3>
+        <div class ="line1-text">
 
-    </div>
-    <!--<div>
-        <img src = https://volunteerns.ca/vking/design/covid-icon.png class = "cvid-img">
-        <img src = https://www.startupcan.ca/wp-content/uploads/2016/03/Startup-Canada-Logo-Icon-red-e21836-1000x1000.png class ="cvid-img">    
-    </div>-->
+            <h1> The most convenient way to keep <br> tabs on COVID cases in Canada.</h1>
 
-    <div class = "button-container">
-        <div class = "button-position">   
+
+        <p class = "sub-text">Know the number of COVID cases anywhere in the True North.</p>
+
 
             <a href ="https://discord.com/oauth2/authorize?client_id=829577533124771841&permissions=183360&scope=bot" class ="button"> 
-               
+           
                 Invite the bot
 
             </a>
 
-        </div>
-        
     </div>
 
 
-    
-   
+ 
 </body>
-
 
 </html>
